@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="alibaba.ververica.flink.connector.mysql.cdc" type="repository">
+    <properties maven-id="com.alibaba.ververica:flink-connector-mysql-cdc:1.3.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/flink-connector-mysql-cdc-1.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

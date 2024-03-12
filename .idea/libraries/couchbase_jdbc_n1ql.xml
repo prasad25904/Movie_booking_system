@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="couchbase.jdbc.n1ql" type="repository">
+    <properties maven-id="com.couchbase.jdbc:jdbc-n1ql:1.0-BETA" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jdbc-n1ql-1.0-BETA.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
