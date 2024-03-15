@@ -60,7 +60,7 @@ public class Movies {
     private void loadDataFromDatabase() {
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url","username","password");
             String query = "SELECT Movie_name, Movie_Timing, Theatre_no, Cost_INR FROM movie_details";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
