@@ -100,7 +100,7 @@ public class CancelTickets {
 
     private void cancelMovie(String customerName, String movieName) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url","username","password");
             String query = "DELETE FROM user WHERE Customer_Name=? AND Movie_name=?";
             PreparedStatement statement = connection.prepareStatement(query);
 
@@ -124,7 +124,7 @@ public class CancelTickets {
     }
     private void loadMovieNames() {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url","username","password");
             String query = "SELECT Movie_name FROM movie_details";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
