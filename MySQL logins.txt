@@ -1,0 +1,13 @@
+USE movie_booking;
+
+CREATE TABLE IF NOT EXISTS logins (
+    username VARCHAR(50),
+    password VARCHAR(50)
+);
+     
+
+
+USE movie_booking;
+
+INSERT INTO logins (username, password)
+VALUES ('example_user', 'example_password');

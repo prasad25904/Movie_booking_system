@@ -1,0 +1,33 @@
+CREATE DATABASE IF NOT EXISTS movie_booking;
+
+USE movie_booking;
+
+CREATE TABLE IF NOT EXISTS movie_details (
+    Movie_name VARCHAR(100),
+    Movie_Timing TIME,
+    Theater_no INT,
+    Cost_INR INT
+);
+
+
+
+
+USE movie_booking;
+
+INSERT INTO movie_details (Movie_name, Movie_Timing, Theater_no, Cost_INR) 
+VALUES 
+    ('Golmaal', '12:00:00', 2, 300),
+    ('Welcome', '09:00:00', 1, 230),
+    ('Manikarnika', '03:00:00', 3, 150),
+    ('Border', '06:00:00', 4, 150),
+    ('Iron Man 3', '12:00:00', 1, 250),
+    ('Loki 2', '09:00:00', 3, 350),
+    ('The Siren', '06:00:00', 8, 280),
+    ('Virupaksh', '05:00:00', 3, 400),
+    ('Conjuring 1', '02:00:00', 4, 300),
+    ('Conjuring 2', '02:00:00', 3, 350),
+    ('Conjuring 3', '01:00:00', 3, 350),
+    ('Housefull 1', '02:00:00', 2, 300),
+    ('Housefull 2', '02:00:00', 1, 300),
+    ('Housefull 3', '02:00:00', 3, 300),
+    ('Housefull 4', '02:00:00', 4, 300);
