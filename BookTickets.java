@@ -49,7 +49,6 @@ public class BookTickets {
         jFrame.add(movieTimings);
         jFrame.add(timings);
 
-        // ... (other UI components)
 
         jFrame.add(book);
 
@@ -162,7 +161,7 @@ public class BookTickets {
     // Method to load movie names from the database
     private void loadMovieNames() {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url", "username", "password");  //of your mysql   jdbc:mysql://localhost:3306/movie_booking
             String query = "SELECT Movie_name FROM movie_details";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
@@ -185,7 +184,7 @@ public class BookTickets {
 
     private String loadMovieCost() {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url", "username", "password");
             String query = "SELECT Cost_INR FROM movie_details";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
@@ -212,7 +211,7 @@ public class BookTickets {
     // Method to store booking information in the database
     private void storeBookingInfo(String selectedMovie, String selectedTiming, String customerName, String customerAge, String ticketCount, String selectedLanguage, boolean is3D) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url", "username", "password");
             String query = "INSERT INTO user (Movie_name, Movie_timing, Customer_Name, Age, Ticket_count, Movie_language, Movie_type) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
@@ -266,7 +265,7 @@ public class BookTickets {
         int count = Integer.parseInt(ticketCount);
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url", "username", "password");
             String query = "SELECT Cost_INR FROM movie_details WHERE Movie_name=?";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, selectedMovie);
