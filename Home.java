@@ -26,7 +26,7 @@ import java.sql.Statement;
         companyName.setBounds(250,30,200,40);
         companyName.setFont(new Font("Comic Sans",Font.BOLD,36));
 
-        ImageIcon i = new ImageIcon("F:\\SY sem1\\OOPs-JAVA\\CP\\ticket.jpeg");
+        ImageIcon i = new ImageIcon("    *    /   *   ");   //Image path
         JLabel jLabel1 = new JLabel(i);
         jLabel1.setBounds(90,0,500,400);
 
@@ -63,7 +63,7 @@ import java.sql.Statement;
         jFrame.add(bottom3);
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url","username","password");
 
             String query = "INSERT INTO account values('" + movies_name + "','" + movie_timing + "','" + customer_name + "','" +
                     age + "','" + ticket_count + "','" + movie_language + "','"+ movie_type+"')";
