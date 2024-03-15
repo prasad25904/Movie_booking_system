@@ -144,7 +144,7 @@ public class BookingDetails {
 
     private void fetchBookingDetails(String movieName, String movieTiming, String customerName) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_booking", "root", "ppp25904");
+            Connection connection = DriverManager.getConnection("url", "username", "password");
             String query = "SELECT Age, Ticket_Count, Movie_Language, Movie_Type FROM movie_details WHERE Movie_Name=? AND Movie_Timing=? AND Customer_Name=?";
             PreparedStatement statement = connection.prepareStatement(query);
 
